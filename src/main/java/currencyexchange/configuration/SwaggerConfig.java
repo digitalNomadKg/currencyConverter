@@ -26,10 +26,10 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Asset management API")
-                .version("1.0.1")
-                .description("Internship task" +
-                        " Internal asset management application")
+                .title("Currency converter API")
+                .version("1.0.0")
+                .description("Improving skill microservice application" +
+                        " currency converter demo application")
                 .build();
     }
 

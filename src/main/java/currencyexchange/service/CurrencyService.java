@@ -3,9 +3,7 @@ package currencyexchange.service;
 import currencyexchange.entity.Currency;
 import currencyexchange.exceptions.CurrencyNotFoundException;
 import currencyexchange.repositories.CurrencyRepository;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

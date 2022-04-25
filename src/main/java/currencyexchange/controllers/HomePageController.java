@@ -22,9 +22,11 @@ public class HomePageController {
     public ResponseEntity<Object> add(@RequestBody Currency add) {
         try {
             currencyService.addCurrency(add);
-            return ResponseHandler.generateResponse("Added successfully".toUpperCase(), HttpStatus.CREATED, add);
+            return ResponseHandler.generateResponse("Added successfully".toUpperCase(),
+                    HttpStatus.CREATED, add);
         } catch (Exception exception) {
-            return ResponseHandler.generateResponse("Bad request, please check!", HttpStatus.BAD_REQUEST, null);
+            return ResponseHandler.generateResponse("Bad request, please check!",
+                    HttpStatus.BAD_REQUEST, null);
         }
     }
 
@@ -33,12 +35,15 @@ public class HomePageController {
         try {
             List<Currency> currencyList = currencyService.getALl();
             if (currencyList.isEmpty()) {
-                return ResponseHandler.generateResponse("No content found".toUpperCase(), HttpStatus.NO_CONTENT, currencyList);
+                return ResponseHandler.generateResponse("No content found".toUpperCase(),
+                        HttpStatus.NO_CONTENT, currencyList);
             }
-            return ResponseHandler.generateResponse("Success".toUpperCase(), HttpStatus.OK, currencyList);
+            return ResponseHandler.generateResponse("Success".toUpperCase(),
+                    HttpStatus.OK, currencyList);
 
         } catch (Exception exception) {
-            return ResponseHandler.generateResponse("No content found", HttpStatus.NOT_FOUND, null);
+            return ResponseHandler.generateResponse("No content found",
+                    HttpStatus.NOT_FOUND, null);
         }
     }
 
@@ -49,7 +54,8 @@ public class HomePageController {
             return ResponseHandler.generateResponse("Successfully retrieved".toUpperCase(), HttpStatus.OK, currency);
 
         } catch (Exception exception) {
-            return ResponseHandler.generateResponse("Currency under ID: " + id + ", not found".toUpperCase(), HttpStatus.NOT_FOUND, null);
+            return ResponseHandler.generateResponse("Currency under ID: " + id + ", not found".toUpperCase(),
+                    HttpStatus.NOT_FOUND, null);
         }
     }
 
@@ -57,10 +63,12 @@ public class HomePageController {
     public ResponseEntity<Object> delete(@PathVariable Long id) {
         try {
             currencyService.deleteById(id);
-            return ResponseHandler.generateResponse("Deleted".toUpperCase(), HttpStatus.OK, "User under ID: " + id + " successfully deleted");
+            return ResponseHandler.generateResponse("Deleted".toUpperCase(),
+                    HttpStatus.OK, "Currency under ID: " + id + " successfully deleted");
 
         } catch (Exception exception) {
-            return ResponseHandler.generateResponse("Currency under ID: " + id + " ,not found", HttpStatus.NOT_FOUND, null);
+            return ResponseHandler.generateResponse("Currency under ID: " + id + " ,not found",
+                    HttpStatus.NOT_FOUND, null);
         }
     }
 }
