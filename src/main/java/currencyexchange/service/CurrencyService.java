@@ -11,8 +11,6 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @RequiredArgsConstructor
-@Getter
-@Setter
 
 @Component
 public class CurrencyService {

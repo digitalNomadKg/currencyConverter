@@ -63,23 +63,4 @@ public class HomePageController {
             return ResponseHandler.generateResponse("Currency under ID: " + id + " ,not found", HttpStatus.NOT_FOUND, null);
         }
     }
-
-
-//    //PUT for an entity. If the entity is not found will create a new one
-//    @RequestMapping(value = "/edit", method = RequestMethod.PUT)
-//    public @ResponseBody
-//    Currency replaceEmployee(@RequestBody Currency newCurrency) {
-//
-//        return currencyRepository.findById(newCurrency.getId())
-//                .map(currency -> {
-//                    currency.setFullCurrencyName(newCurrency.getFullCurrencyName());
-//                    currency.setConversionFactor(newCurrency.getConversionFactor());
-//                    currency.setShortCurrencyName(newCurrency.getShortCurrencyName());
-//                    return currencyRepository.save(currency);
-//                })
-//                .orElseGet(() -> {
-//                    return currencyRepository.save(newCurrency);
-//                });
-//    }
-
 }
