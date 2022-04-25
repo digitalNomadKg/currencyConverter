@@ -1,5 +1,6 @@
 package currencyexchange.configuration;
 
+import io.swagger.models.Contact;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -26,11 +27,21 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Currency converter API")
-                .version("1.0.0")
-                .description("Improving skill microservice application" +
-                        " currency converter demo application")
-                .build();
+                .title("Currency converter API documentation")
+                .version("1.0.1")
+                .description("The currency exchange server the basic functionality of API includes creating a currency converter with given currency codes,\n" +
+                        "updating the currency codes, getting all currencies and deleting currency by ID from the database.\n" +
+                        "Currency exchange converter API provides only a REST interface. There is no user interface.\n" +
+                        "The service can be used and tested via API testing tools (e.g., SoapUI, Postman).\n" +
+                        "Solution of the task was done according to OpenAPI documentation.")
+                .build(); 
+    }
+
+    private Contact contact() {
+        return new Contact()
+                .email("tim.kirves@gmail.com")
+                .name("Tim Kirves")
+                .url("https://www.linkedin.com/in/timurbal/");
     }
 
 }

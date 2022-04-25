@@ -8,9 +8,9 @@ Currency exchange converter API provides only a REST interface. There is no user
 The service can be used and tested via API testing tools (e.g., SoapUI, Postman).
 Solution of the task was done according to OpenAPI documentation.
 
-_Technical choices_
+__Technical choices__
 
-    1) Spring Boot version 2.5.5
+    1) Spring Boot version 2.2.6
     2) Spring Data JPA
     3) Gradle
     4) Lombok
@@ -20,30 +20,32 @@ _Technical choices_
     8) Docker
     9) Docker Gradle Plugin
 
-_Deployment instructions:_
+__Deployment instructions:__
 
     1) PostGresSql database:(localhost:5432/converter)
-    login: postgres
-    password: root123
+      - login: postgres
+      - password: root123
     
-    2) No authentification
+    2) Basic authentification
+      - login: admin
+      - password:root123
+
     3) Transport API provides only a REST interface, no user interface
     4) Application is running on localhost: server: 8081 
     5) Swagger UI : http://localhost:8081/swagger-ui.html
 
-_API offers the following resource collections:_
+__API offers the following resource collections:__
 
     Currency - represents the physical currency entity.
  
-_Manage Currency:_
+__Manage Currency:__
 
-    Create currency.
-    Get all currencies.
-    Update currency.
-    Delete currency with given ID.
+    1) Create currency.
+    2) Get all currencies.
+    3) Update currency.
+    4) Delete currency with given ID.
 
-_Things to be done:_
+__Things to be done:__
 
     1) Dockerfile
-    2) Basic Spring Security Authentification
 
