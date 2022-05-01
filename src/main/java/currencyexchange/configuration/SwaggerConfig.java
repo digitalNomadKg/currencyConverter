@@ -34,7 +34,7 @@ public class SwaggerConfig {
                         "Currency exchange converter API provides only a REST interface. There is no user interface.\n" +
                         "The service can be used and tested via API testing tools (e.g., SoapUI, Postman).\n" +
                         "Solution of the task was done according to OpenAPI documentation.")
-                .build(); 
+                .build();
     }
 
     private Contact contact() {

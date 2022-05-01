@@ -48,4 +48,4 @@ __Manage Currency:__
 __Things to be done:__
 
     1) Dockerfile
-
+    2) Basic UI
